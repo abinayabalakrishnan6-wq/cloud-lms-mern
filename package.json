@@ -1,0 +1,25 @@
+{
+  "name": "cloud-lms-platform",
+  "version": "1.0.0",
+  "description": "Modern Cloud-Based Learning Management System (LMS) using MERN Stack",
+  "main": "server/server.js",
+  "scripts": {
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client dev",
+    "build": "npm --prefix client run build",
+    "seed": "npm --prefix server run seed",
+    "start": "node server/server.js",
+    "install:all": "npm --prefix server install && npm --prefix client install"
+  },
+  "keywords": [
+    "mern",
+    "lms",
+    "cloud",
+    "mongodb-atlas",
+    "react",
+    "express",
+    "tailwind"
+  ],
+  "author": "Mini Project",
+  "license": "MIT"
+}

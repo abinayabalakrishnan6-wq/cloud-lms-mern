@@ -1,0 +1,19 @@
+const express = require('express');
+const router = express.Router();
+const {
+  getPlatformStats,
+  getAllUsers,
+  updateUser,
+  deleteUser,
+} = require('../controllers/adminController');
+const { protect, authorize } = require('../middleware/authMiddleware');
+
+router.use(protect);
+router.use(authorize('Admin'));
+
+router.get('/stats', getPlatformStats);
+router.get('/users', getAllUsers);
+router.put('/users/:id', updateUser);
+router.delete('/users/:id', deleteUser);
+
+module.exports = router;
